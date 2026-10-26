@@ -62,7 +62,7 @@ input:hover, textarea:hover {
 }
 
 input:focus, textarea:focus {
-  border-color: #f06449;
+  border-color: #2F5D3A;
 }
 
 .container {
@@ -98,7 +98,7 @@ input:focus, textarea:focus {
 }
 
 .orange {
-  color: #f06449 !important;
+  color: #2F5D3A !important;
 }
 
 .link__hover-effect {
@@ -201,7 +201,7 @@ nav,
 }
 
 .social__link {
-  background-color: #f06449;
+  background-color: #2F5D3A;
   color: white;
   padding: 6px;
   width: 32px;
@@ -213,6 +213,12 @@ nav,
   align-items: center;
   border-radius: 50%;
 }
+
+.social__link i {
+  color: white;
+  font-size: 18px;
+}
+
 
 .mail__btn {
   width: 70px;
@@ -283,14 +289,15 @@ nav {
 }
 
 #personal-logo {
-  width: 100px;
-  height: 100px;
-  filter: transparent;
-  background-color: rgb(245, 245, 245);  /* matches your site background */
-  padding: 10px;            /* adds breathing room */
-  
-  
+  width: 280px;
+  height: 180px;
+  filter: none; /* prevents inversion */
+  background-color: transparent; /* removes white block */
+  padding: 0; /* removes spacing that created the block */
+  border: none; /* ensures no border appears */
+  margin-left: -100px; /* moves logo left */
 }
+
 
 .nav__link--list {
   display: flex;
@@ -416,8 +423,8 @@ nav {
 }
 
 .form__submit {
-  background-color: #f06449;
-  border: 2px solid #f06449;
+  background-color: #2F5D3A;
+  border: 2px solid #2F5D3A;
   color: white;
   font-weight: 700;
   width: 100%;
@@ -433,8 +440,8 @@ nav {
 }
 
 .form__submit:active {
-  border-color: #f06449;
-  color: #f06449;
+  border-color: #2F5D3A;
+  color: #2F5D3A;
 }
 
 .modal__overlay {
@@ -583,7 +590,7 @@ footer {
   position: relative;
   background-color: #242424;
   display: flex;
-  padding: 6% 0;
+  padding: 10px 0;
 }
 
 .footer__row {
@@ -593,7 +600,7 @@ footer {
 }
 
 .footer__logo--img {
-  width: 70px;
+  width: 300px;
 }
 
 .footer__social--list {
@@ -608,6 +615,12 @@ footer {
 .footer__copyright {
   color: white;
 }
+
+.social__link i {
+  color: white !important;
+  font-size: 18px;
+}
+
 
 /* 
 
@@ -739,5 +752,11 @@ footer {
   }
   .modal__half {
     padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #personal-logo {
+    margin-left: -50%; /* keeps it visible on tablets and phones */
   }
 }
